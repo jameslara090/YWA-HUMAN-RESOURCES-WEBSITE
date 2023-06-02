@@ -107,14 +107,17 @@
                 </v-list>
             </v-menu>
             <!--Homepage-->
-            <v-btn
+            <v-hover v-slot="{ hover}">
+                <v-btn
                 plain
                 dark
                 @click.prevent="HomePage"
                 class="d-none d-sm-flex"
+                :style="{ 'border-bottom': hover ? '5px solid #3465fc' : 'white'}"
             >  
                 Home
             </v-btn>
+            </v-hover>
             <!--Clients-->
             <v-btn
                 plain
