@@ -6,7 +6,7 @@
    ```
 2. Go to project directory
    ```cmd
-   cd vuejs-laravel-spa
+   cd YWA-HUMAN-RESOURCES-WEBSITE
    ```
 3. Install PHP dependencies
    ```sh
