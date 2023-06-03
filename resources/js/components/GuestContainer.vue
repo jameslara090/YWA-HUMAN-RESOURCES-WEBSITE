@@ -2,9 +2,8 @@
     <v-app class="v-theme--light">
         <v-app-bar
             app
-            dark
             flat
-            style="background-color: rgb(231, 240, 246); top: 0px; z-index: 1080; transform: translateY(0%); position: fixed; height: 63px; left: 4px; width: calc((100% - 0px) - 0px);"
+            style="background-color: rgb(231, 240, 246); top: 0px; z-index: 1080; transform: translateY(0%); position: fixed; height: 65px; left: 0px; width: calc((100% - 0px) - 0px);"
             
         >
             <v-toolbar-title>
@@ -36,6 +35,7 @@
             >  
                <div class="text-col-black">Home</div> 
             </v-btn></v-hover>
+            
             <!--Clients-->
             <v-hover v-slot="{ hover}"><v-btn
                 plain
