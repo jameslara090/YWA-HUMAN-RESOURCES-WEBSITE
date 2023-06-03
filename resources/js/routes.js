@@ -13,7 +13,7 @@ const routes = new VueRouter({
             name: 'NotFound'
         },
         {
-            path: '/',
+            path: '',
             component: () => import(/* webpackChunkName: "app_container" */ './components/AppContainer'),
             children: [
                 {
@@ -22,7 +22,7 @@ const routes = new VueRouter({
                     meta: { isGuest: true },
                     children: [
                         {
-                          path:'home',
+                          path:'',
                           component: () => import(/* webpackChunkName: "home" */ './pages/Homepage/index.vue'),
                           name: 'Home'
                         },

@@ -7,7 +7,9 @@
           YWA is in <br> the Business of <br>Building Live, <br>Economies and Nations
         </h1>
         <h4 class="subheading">
-          Find your Jobs Now!
+          <v-col cols="auto">
+             <v-btn @click.prevent="loginPage" density="comfortable">Register Now with YWA</v-btn>
+            </v-col>
         </h4>
       </div>
     </v-parallax>
