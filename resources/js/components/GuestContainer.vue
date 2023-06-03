@@ -1,13 +1,14 @@
 <template>
-    <v-app>
+    <v-app class="v-theme--light">
         <v-app-bar
             app
-            color="light"
             dark
             flat
+            style="background-color: rgb(231, 240, 246); top: 0px; z-index: 1080; transform: translateY(0%); position: fixed; height: 63px; left: 4px; width: calc((100% - 0px) - 0px);"
+            
         >
             <v-toolbar-title>
-                <v-img :max-width="300" :max-height="200" src="images/Ywa.png"  lazy-src="images/Ywa.png">
+                 <v-img :max-width="185" :max-height="190" src="images/Ywa.png"  lazy-src="images/Ywa.png">
                     <template v-slot:placeholder>
                                     <v-row
                                         class="fill-height ma-0"
@@ -106,76 +107,73 @@
                     </v-list-item>
                 </v-list>
             </v-menu>
+           
             <!--Homepage-->
-            <v-hover v-slot="{ hover}">
-                <v-btn
+            <v-hover v-slot="{ hover}"><v-btn
                 plain
-                dark
                 @click.prevent="HomePage"
                 class="d-none d-sm-flex"
-                :style="{ 'border-bottom': hover ? '5px solid #3465fc' : 'white'}"
+                :style="{ 'border-bottom': hover ? '5px solid #3465fc' : 'black'}"
+                density="compact"
             >  
-                Home
-            </v-btn>
-            </v-hover>
+               <div class="text-col-black">Home</div> 
+            </v-btn></v-hover>
             <!--Clients-->
-            <v-btn
+            <v-hover v-slot="{ hover}"><v-btn
                 plain
-                dark
                 @click.prevent="ClientPage"
                 class="d-none d-sm-flex"
-            >
-                Clients
-            </v-btn>
+                :style="{ 'border-bottom': hover ? '5px solid #3465fc' : 'black'}"
+                density="compact"
+            >  
+               <div class="text-col-black">Clients</div> 
+            </v-btn></v-hover>
             <!--Jobs-->
-            <v-btn
+            <v-hover v-slot="{ hover}"><v-btn
                 plain
-                dark
-                @click.prevent="JobsPage"
+                @click.prevent="JobPage"
                 class="d-none d-sm-flex"
-            >
-                Jobs
-            </v-btn>
-            <v-btn
+                :style="{ 'border-bottom': hover ? '5px solid #3465fc' : 'black'}"
+                density="compact"
+            >  
+               <div class="text-col-black">Jobs</div> 
+            </v-btn></v-hover>
+            <!--Our Industries-->
+            <v-hover v-slot="{ hover}"><v-btn
                 plain
-                dark
-                @click.prevent="JobsPage"
+                @click.prevent="OurIndustries"
                 class="d-none d-sm-flex"
-            >
-                Our Industries
-            </v-btn>
+                :style="{ 'border-bottom': hover ? '5px solid #3465fc' : 'black'}"
+                density="compact"
+            >  
+               <div class="text-col-black">Our Industries</div> 
+            </v-btn></v-hover>
+            
             <!--About Us-->
-            <v-btn
+            <v-hover v-slot="{ hover}"><v-btn
                 plain
-                dark
                 @click.prevent="aboutPage"
                 class="d-none d-sm-flex"
-            >
-                About Us
-            </v-btn>
+                :style="{ 'border-bottom': hover ? '5px solid #3465fc' : 'black'}"
+                density="compact"
+            >  
+               <div class="text-col-black">About</div> 
+            </v-btn></v-hover>
 
             <!--Contact Us-->
-             <!--About Us-->
-             <v-btn
+            <v-hover v-slot="{ hover}"><v-btn
                 plain
-                dark
-                @click.prevent="aboutPage"
+                @click.prevent="contactUs"
                 class="d-none d-sm-flex"
-            >
-                Contact Us
-            </v-btn>
+                :style="{ 'border-bottom': hover ? '5px solid #3465fc' : 'black'}"
+                density="compact"
+            >  
+               <div class="text-col-black">Contact Us</div> 
+            </v-btn></v-hover>
 
-            <v-btn
-                plain
-                dark
-                @click.prevent="loginPage"
-                class="d-none d-sm-flex"
-            >
-                <v-icon left>mdi-login-variant</v-icon>
-                Apply Now
-            </v-btn>
-
-            <Theme />
+            <v-col cols="auto">
+             <v-btn @click.prevent="loginPage" density="comfortable">Apply Now</v-btn>
+            </v-col>
 
         </v-app-bar>
 
@@ -185,6 +183,13 @@
 
     </v-app>
 </template>
+<style>
+    .text-col-black{
+        color:black;
+        font-size: 40;
+        font-weight: bold;
+    }
+</style>
 
 <script>
 import Theme from "./general/Theme";
