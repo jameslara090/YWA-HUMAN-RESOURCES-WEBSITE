@@ -2,11 +2,11 @@
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/mkjdy/vuejs-laravel-spa
+   git clone https://github.com/mkjdy/vuejs-laravel-spa](https://github.com/jameslara090/YWA-HUMAN-RESOURCES-WEBSITE.git
    ```
 2. Go to project directory
    ```cmd
-   cd vuejs-laravel-spa
+   cd YWA-HUMAN-RESOURCES-WEBSITE
    ```
 3. Install PHP dependencies
    ```sh
