@@ -29,7 +29,6 @@
             <v-hover v-slot="{ hover}"><v-btn
                 plain
                 @click.prevent="HomePage"
-                class="d-none d-sm-flex"
                 :style="{ 'border-bottom': hover ? '5px solid #3465fc' : 'black'}"
                 density="compact"
             >  
@@ -121,6 +120,8 @@
         font-size: 40;
         font-weight: bold;
     }
+   
+
 </style>
 
 <script>
