@@ -98,7 +98,7 @@
                         </v-card>
                     </v-card>
                 </v-layout>
-            </v-container>
+            </v-container> 
         </v-main>
     </v-app>
 </template>

@@ -26,7 +26,7 @@
             <v-spacer></v-spacer>
             
             <!--Homepage-->
-            <v-hover v-slot="{ hover}"><v-btn
+            <v-hover v-slot="{ hover}"><v-btn v-if="!isMobileView"
                 plain
                 @click.prevent="HomePage"
                 :style="{ 'border-bottom': hover ? '5px solid #3465fc' : 'black'}"
@@ -89,7 +89,7 @@
             </v-btn></v-hover>
 
             <v-col cols="auto" v-if="!isMobileView">
-             <v-btn @click.prevent="loginPage"  color="indigo" density="comfortable"><v-icon left>mdi-login-variant</v-icon>Login</v-btn>
+             <v-btn @click.prevent="loginPage" color="primary" density="comfortable"><v-icon>mdi-login-variant</v-icon>Login</v-btn>
             </v-col>
         <!--<Theme />-->  
         <v-menu>
@@ -111,7 +111,6 @@
         <v-main>
             <router-view />
         </v-main>
-
     </v-app>
 </template>
 <style>
@@ -127,11 +126,14 @@
 <script>
 import Theme from "./general/Theme";
 import navdrawer from "./general/Drawermenu";
+import searchJob from "./general/searchjob";
+
 
 export default {
     components: {
         Theme,
-        navdrawer
+        navdrawer,
+        searchJob
     },
     data() {
         return {

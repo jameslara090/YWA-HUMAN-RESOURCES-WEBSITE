@@ -1,6 +1,7 @@
-
-  <template>
-      <v-carousel
+<template>
+  <v-row>
+      <v-col cols="12">
+        <v-carousel
       v-model="currentSlide"
       :interval="slideInterval"
       height="520"
@@ -8,35 +9,109 @@
       show-dots
       hide-delimiter-background
       cycle
-    >
+      >
+        <v-carousel-item v-for="(item, index) in items" :key="index">      
+                <v-sheet
+                  v-if="showTimer"
+                  :value="timerProgress"
+                  height="5"
+                  background-color="grey lighten-2"
+                  :class="img-opacity"
+                  :height="600"
+                >
+              <v-img :src="item.src" class="img-opacity" height="600" :alt="item.alt"></v-img>
+                <div class="text-overlay">
+                      <div class="text-h3">
+                      YWA is now inviting you to Apply Abroad. We'll Help you to achieved your Dreams
+                        of becoming Professional
+                      </div>
+                      <br>
+                      <v-btn :color="indigo" :class="text-h2">
+                          Apply Now
+                      </v-btn>
 
-    <v-carousel-item v-for="(item, index) in items" :key="index">      
-            <v-sheet
-              v-if="showTimer"
-              :value="timerProgress"
-              height="5"
-              background-color="grey lighten-2"
-              :class="img-opacity"
-              :height="600"
+                </div>
+                </v-sheet>
+        </v-carousel-item>
+      </v-carousel>
+      </v-col>
+
+      <v-col cols="12">
+        <v-card
+                class="mx-auto"
+                max-width="1000"
+                variant="outlined"
+                color="#311B9"
+                :class="pt-9">
+            <v-form v-model="valid">
+            <v-container class="pl-14 pt-5 pb-4">
+              <v-row>
+                <v-col
+                  cols="12"
+                  md="3"
+                >
+                  <v-text-field
+                    label="Enter Keywords"
+                  ></v-text-field>
+                </v-col>
+
+                <v-col
+                  cols="12"
+                  md="3"
+                >
+                <v-select
+                  label="Job Classification"   
+                   ></v-select>
+                </v-col>
+
+                <v-col cols="12" md="3">
+                  <v-select
+                  label="Location"   
+                   ></v-select>
+                </v-col>
+                <v-col cols="12" md="3">
+                <v-card-actions>
+                  <v-btn color="primary" variant="outlined">
+                    <v-icon left>mdi-magnify</v-icon>Search
+                  </v-btn>
+                </v-card-actions>
+                </v-col>
+              </v-row>
+            </v-container>
+          </v-form>
+          </v-card>
+      </v-col>
+
+     <v-container>
+       <v-row>
+        <v-divider :thickness="10" color="info" vertical></v-divider>
+            <v-col cols="4" :justify="center">
+                <h1 style="padding-top: 9.5rem;">Availables Jobs</h1>
+            </v-col>
+            <v-col cols="8">
+              <v-carousel
+            v-model="currentSlide"
+            :interval="slideInterval"
+            height="350"
+            show-arrows="hover"
+            show-dots   
+            hide-delimiter-background
+            cycle
             >
-          <v-img :src="item.src" class="img-opacity" height="600" :alt="item.alt"></v-img>
-            <div class="text-overlay">
-                  <div class="text-h3">
-                  Work Abroad Now with Your YWA Partner and We Deploy a {{ item.alt }}
-                  </div>
-                  <br>
-                  <v-btn :color="indigo">
-                      Apply Now
-                   </v-btn>
+          
+            <v-col cols="12">
+        
+            </v-col>
+            </v-carousel>
+            </v-col>
+       </v-row> 
+     </v-container> 
+  </v-row>
+  
+</template>
 
-            </div>
-            </v-sheet>
-     </v-carousel-item>
-    </v-carousel>
-    
-  </template>
-
-  <style scoped>
+ 
+<style scoped>
       .text-overlay {
         position: absolute;
         top: 50%; /* Positions the text 50% from the top */
@@ -63,6 +138,7 @@
 
 <script>
 export default {
+  
   data() {
     return {
       currentSlide: 0,
@@ -75,6 +151,12 @@ export default {
         { src: "../images/carpenter.jpg", alt: "Carpenter" },
         { src: "../images/health-care.jpg", alt: "Health Care Assistance" },
       ],
+      slides: [
+        ['Item 1', 'Item 2', 'Item 3', 'Item 4'],
+        ['Item 5', 'Item 6', 'Item 7', 'Item 8'],
+        ['Item 9', 'Item 10', 'Item 11', 'Item 12']
+        // Add more rows or modify as needed
+      ]
     };
   },
   mounted() {

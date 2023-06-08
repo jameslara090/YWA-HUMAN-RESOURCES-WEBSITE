@@ -202,6 +202,7 @@
 </template>
 
 <script>
+
 import UserProfile from './UserProfile'
 import { ValidationObserver, ValidationProvider } from 'vee-validate'
 export default {

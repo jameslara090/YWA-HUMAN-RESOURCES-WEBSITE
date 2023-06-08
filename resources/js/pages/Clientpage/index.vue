@@ -2,9 +2,61 @@
     <div>
         <v-container>
             <v-row>
-                <v-col>
-                    This is Client Page
-                </v-col>
+                <v-col cols="3">
+         <v-container>
+              <v-card
+                class="mx-auto"
+                max-width="344"
+                variant="outlined"
+              >
+                <v-card-item>
+                  <div>
+                    <div class="text-overline mb-1">
+                      OVERLINE
+                    </div>
+                    <div class="text-h6 mb-1">
+                      Headline
+                    </div>
+                    <div class="text-caption">Greyhound divisely hello coldly fonwderfully</div>
+                  </div>
+                </v-card-item>
+
+                <v-card-actions>
+                  <v-btn variant="outlined">
+                    Button
+                  </v-btn>
+                </v-card-actions>
+              </v-card>
+         </v-container>
+      </v-col>
+
+      <v-col cols="3">
+         <v-container>
+              <v-card
+                class="mx-auto"
+                max-width="344"
+                variant="outlined"
+              >
+                <v-card-item>
+                  <div>
+                    <div class="text-overline mb-1">
+                      OVERLINE
+                    </div>
+                    <div class="text-h6 mb-1">
+                      Headline
+                    </div>
+                    <div class="text-caption">Greyhound divisely hello coldly fonwderfully</div>
+                  </div>
+                </v-card-item>
+
+                <v-card-actions>
+                  <v-btn variant="outlined">
+                    Button
+                  </v-btn>
+                </v-card-actions>
+              </v-card>
+         </v-container>
+      </v-col>
             </v-row>
         </v-container>
     </div>
